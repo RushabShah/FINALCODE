@@ -1,0 +1,15 @@
+<html>
+
+<h1>DataSource Variables </h1>
+<body>
+    <p>
+    {% if name %}
+        DataSource Name is {{ name }}
+    {% endif %}
+    </p>
+    <p>Variables are: </p><br>
+    {% for entry in length %}
+        <br>{{variables[entry]}},{{values[entry]}}<br>
+    {% endfor %}
+</body>
+</html>
