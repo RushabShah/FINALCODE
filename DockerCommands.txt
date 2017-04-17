@@ -1,0 +1,18 @@
+Terminal1
+
+docker run ubuntu /bin/echo 'Hello World'
+docker run -it ubuntu /bin/bash
+
+
+Terminal2
+
+docker ps
+docker cp helloworld.sh 8ecf7e94b87c:/helloworld.sh
+
+Terminal 1 again
+ls
+./helloworld.sh
+exit
+
+Terminal 2 again
+docker ps

@@ -1,0 +1,7 @@
+installation:-
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2057907
+
+use this license key while installation:
+http://appnee.com/10-vmware-workstation-pro-12-x-universal-license-keys-for-win-lin/
+
+

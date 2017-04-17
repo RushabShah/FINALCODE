@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Employee Database</title>
+<style>
+	th,td{
+		padding:10px;
+		border:1px solid black
+	}
+</style>
+</head>
+<body>
+<h3>Add Employee</h3>
+<form action="/add" method='POST'>
+<input type="text" name="fname" placeholder="FIRST NAME">
+<input type="text" name="lname" placeholder="LAST NAME">
+<input type="text" name="dept" placeholder="DEPARTMENT NAME">
+<input type="text" name="sal" placeholder="SALARY">
+<input type="submit" value="ADD">
+</form>
+<h3>Employee List</h3>
+<table>
+	<thead>
+		<th>FIRST NAME</th>
+		<th>LAST NAME</th>
+		<th>DEPARTMENT NAME</th>
+		<th>SALARY</th>
+		<th>DATE</th>
+	</thead>
+	<tbody>
+	{% for i in emp %}
+		<tr>
+		<td>{{i.fname}}</td>
+		<td>{{i.lname}}</td>
+		<td>{{i.dept}}</td>
+		<td>{{i.sal}}</td>
+		<td>{{i.date}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+</body>
+</html>

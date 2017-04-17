@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<title>Ubidots demonstration</title>
+
+</head>
+
+<body>
+
+	<center>
+			<h3>Create Data Source</h3>
+			<form action="/create" method="get">
+				Name <input type="text" name="name" >
+				Tag1 <input type="text" name="tag1" >
+				Tag2 <input type="text" name="tag2" >
+				Description <input type="text" name="desc">
+				<input type="submit" value="create datasource">
+			</form>
+
+			<br>
+			<br>
+			<h3>Insert Variable</h3>
+			<form action="/insert" method="get">
+				Name <input type="text" name="vname" >
+				Unit <input type="text" name="unit" >
+				Value1 <input type="number" name="val1" >
+				Value2 <input type="text" name="val2">
+				<input type="submit" value="insert variable">
+			</form>
+
+
+			<br>
+			<br>
+			<h3>Get Values</h3>
+			<form action="/getvalues" method="get">
+				<input type="submit" value="get variable values">
+			</form>
+
+		
+			{% if msg %}
+				{{ msg }}
+			{% endif %}
+			
+
+
+	</center>
+
+</body>
+</html>
