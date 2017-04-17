@@ -4,6 +4,10 @@ import time
 from pymongo import MongoClient
 class Philosopher(threading.Thread):
     running = True
+    #connection=MongoClient('mongodb://username:pwd@ip:27017/dbname')
+    #Client=MongoClient('mongodb://username:pwd@ip:27017/dbname')
+    #db=Client.dbname
+    #collection=db.colname
     connection = MongoClient("127.0.0.1",27017)
     printcounter=0
 
