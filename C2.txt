@@ -1,0 +1,27 @@
+Refer this for installation and steps:
+https://www.howtoforge.com/linux_lvm
+
+
+Execution steps:-
+fdisk -l
+fdisk /dev/sdb1
+n - 5 enter
+p - 1 enter
+t - 8e
+w
+partprobe
+df -h
+pvcreate /dev/sdb1
+vgcreate volgrp /dev/sdb1
+vgdisplay
+lvcreate --name logvol --size 1G volgrp
+lvdisplay
+mkfs.xfs /dev/volgrp/logvol
+mount /dev/volgrp/logvol /home/shirley/share
+umount share
+lvremove /dev/volgrp/logvol
+vgremove volgrp
+pvremove /dev/sdb1
+
+
+
